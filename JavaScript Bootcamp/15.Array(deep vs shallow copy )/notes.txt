@@ -1,0 +1,4 @@
+
+Limitations: This method does not work for objects containing functions, undefined, Date objects, Map, Set, or circular references, as JSON.stringify cannot serialize these types. Using structuredClone() (Modern JavaScript).
+
+structuredClone() is a built-in function designed for deep cloning.

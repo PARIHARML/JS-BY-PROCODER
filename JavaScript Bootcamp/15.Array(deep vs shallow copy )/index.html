@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array-Deep vs Shallow copy</title>
+  </head>
+
+  <body>
+    <h1>Learning about Right way of Duplicating Array & Object</h1>
+    <script>
+      // Array-(Deep vs Shallow copy) //
+
+      // const firstName = "Adarsh "
+
+      // const lastName = firstName + "singh"
+      
+      //    user2.lastName = "Chauhan" 
+      
+
+      
+      
+      const user1 = {
+        firstName: "Naveen Singh",
+        lastName: "Parihar",
+        address: { city: "Rewa", state: "madhya Pradesh", country: "India" , pinCode : 486001 },
+        subject : ["physics","CS","Maths"]
+      };
+      
+      //  const user2 = user1 // THIS IS NOT A RIGHT WAY TO COPY ONE OBJECT TO ANOTHER OBJECT BECAUSE BOTH HOLDS SAME ADDRESS and WHEN WE UPDATE KEY VALUE IT REFLECTS IN THE BOTH OBJECT//
+
+      // const user2 = {...user1} // shallow copy , it not works on nested object //
+
+    // const user2 = JSON.parse(JSON.stringify(user1)); // deepCopy ,it works on nested object too but its have own Limitation //
+
+    // const user2 = structuredClone(user1) // structuredClone() is a built-in function designed for deep Copy or cloning.//
+
+      // user2.address.city = "indore"
+
+      // const user2 = {}
+    // Object.assign(user2 , user1) // (shallow copy) (1st way) THIS IS A RIGHT WAY TO COPY ONE OBJECT TO ANOTHER OBJECT BECAUSE BOTH DOESN'T HOLDS SAME ADDRESS and WHEN WE UPDATE KEY VALUE IT NOT REFLECTS IN THE BOTH OBJECT//
+      //  const myFruits = {...fruits} // (2nd way)
+      // user2.city = "Rewa"
+
+      // user2.lastName = 'chauhan'
+
+      const fruits = ["Apple","Grapes","Mango"]
+
+      // const myFruits = fruits // this is not a copy at all , pure copy means when we change any value or key value inside the variable or object or array it should not reflect in assigned variable //
+
+      const myFruits = [...fruits] // (spread operator or shallow Copy) => is used to clone the array or assign one array to another array (1st way) THIS IS MOST COMMON USED METHOD //
+
+      
+      // Object.assign(myFruits , fruits) // (2nd way)this type of assignment in the array work perfectly but mostly we use in the object and we know already behind the seen array works like object. //
+      
+      // const myFruits = [].concat(fruits) // 3rd way clone the array //
+      // const myFruits = fruits.slice() // 4th way clone the array //
+      
+      // myFruits.push("Orange","Lichi")
+      myFruits.push("Banana","Orange")
+
+    </script>
+  </body>
+</html>
