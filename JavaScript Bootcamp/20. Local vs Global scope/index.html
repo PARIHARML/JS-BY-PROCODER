@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local vs Global Scope</title>
+  </head>
+  <body>
+    <h1>Learning about Local vs Global Scope</h1>
+
+    <script >
+        'use strict' // iska use krne se variable name without data ke error dega ( num = 900 , num not defined) and many more //
+      // Globl Scope....ke andr (window object aur script scope) aate hain aur saare variable inhi ke andr aate hain //
+
+      // debugger;
+      const username = "NaveenSingh";
+      let age = 25;
+
+      var a = 40;
+    //   num = 900
+
+      function add() {
+        const username = "AdarshSingh";
+        const x = 20;
+
+        const y = 70;
+        console.log(x + y);
+        console.log(username); // apne closest or apne local se value Lega //
+        // return "hello";
+      }
+
+      function subtract() {
+        const x = 20;
+        const y = 70;
+        const z = 50;
+        console.log(x - y);
+        console.log(username);
+        
+
+        function child() {
+          const childName = "Krishu";
+          console.log(childName);
+          console.log(z, x, y, a, age, username); // inner function me outer fun ya parent function ka variable use krte hain to closure ban jata hai .//
+          
+
+          
+          function grandChild() {
+            const grandChildName = "Kripa"; // iska lexica scope hoga iska khud ka scope iske parent ka scope aur parent ke parent ka scope   aise hi badhta jayega its also called lexical scope channing . it have access of all above scope till global scope  when we combine all scope its called Lexical scope. //
+            console.log(grandChildName);
+          }
+          grandChild();
+          
+        }
+        child();
+        // 
+        // return "hello";
+      }
+
+      subtract();
+      add();
+    </script>
+  </body>
+</html>
