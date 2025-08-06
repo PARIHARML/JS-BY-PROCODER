@@ -38,7 +38,11 @@
 
       console.log("Hi-2");
 
-      // synchronous code - woh code Jo bhi call stack pe directly jaa kar execute ho jata hai // 
+      // synchronous code - woh code Jo bhi call stack pe directly jaa kar execute ho jata hai line by line,  operations are performed sequentially, one after another, in the order they appear in the program. Each operation must complete before the next one begins.
+      Key characteristics of synchronous JavaScript:
+Sequential Execution: Instructions are processed line by line, from top to bottom.
+Blocking Behavior: If a task is time-consuming, it will halt the execution of the entire program until that task is finished.
+Call Stack: The JavaScript engine uses a call stack to manage function calls and their execution order, ensuring synchronous operations are processed in sequence. // 
 
       // Asynchronous code - woh code Jo bhi call stack pe directly Na jaa kar pahle (web api - setTimeout ke timimg ke according web-api pe code rahega uske baad CALLBACK Queue) pe jata hai usk baad (CALLBACK queue) jata aur phir call stack me jaa kar execute ho jata hai // 
 
@@ -50,3 +54,4 @@
     </script>
   </body>
 </html>
+
