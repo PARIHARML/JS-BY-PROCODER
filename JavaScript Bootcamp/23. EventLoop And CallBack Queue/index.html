@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23.EventLoop And CallBack Queue</title>
+  </head>
+  <body>
+    <h1>Today i Am Learning About EventLoop And CallBack Queue</h1>
+
+    <script>
+      //  EventLoop And CallBack Queue   //
+        // debugger
+      console.log("Hi-1");
+
+      function hello(){
+
+        console.log("HelloWorld!!");
+      }
+
+    //   for (let i = 1; i <= 4; i++) {
+    //     console.log(i);
+    //   }
+
+      hello()
+      setTimeout(hello , 1000)
+      setTimeout(hello , 2000)
+      setTimeout(hello , 3000)
+
+      setTimeout(function (){
+
+        console.log("Aa Gaya swaad🤣");
+      },4000)
+
+      for (let i = 1; i <= 4; i++) {
+        console.log(i);
+      }
+
+      console.log("Hi-2");
+
+      // synchronous code - woh code Jo bhi call stack pe directly jaa kar execute ho jata hai // 
+
+      // Asynchronous code - woh code Jo bhi call stack pe directly Na jaa kar pahle (web api - setTimeout ke timimg ke according web-api pe code rahega uske baad CALLBACK Queue) pe jata hai usk baad (CALLBACK queue) jata aur phir call stack me jaa kar execute ho jata hai // 
+
+      // EventLoop - YE Check krta H call stack empty hai kai nahi jaise hi empty dekhta hai wo callBack queue ka (Asynchronous code) Queue mechanism(LILO OR FIFO) ke according push krta RaHta hai.//
+
+      // web api jo V (Asynchronous code) javascript bhejta hai usk track Record Rakhta ki ye kon sa code kitni der tak mere pass raha hai . iska record JS ni rakhta hai because usko multiple task perform karne hote hain( ye browser ki functionality h js Engine k baahr ki cheeeze hain ye ) agr wo ye v kaam karega to setTimeout ke according agr 1sec v wait krna pada to browser utni der tak freez ho jayega .//  
+
+
+    </script>
+  </body>
+</html>
