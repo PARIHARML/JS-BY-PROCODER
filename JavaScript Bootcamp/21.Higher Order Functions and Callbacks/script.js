@@ -19,12 +19,12 @@
 
 // debugger
 
-function a(b){   // a is a function which is a higher order function because i am passing function inside it. isliye a ek higher order function ban chuka hai. //
+function a(b){   // a is a function which is a higher order function because i am passing function inside it. isliye a ek higher order function ban chuka hai. A higher order function is a function that takes one or more functions as Arguments . OR its return value is a function as a result.//
 
     // console.log( b);
     console.dir(b);
 
-    b()  // call back Function - function ko hm directly call ni karte hain //
+    b()  // call back Function - function ko hm directly call ni karte hain . A function that is passed as an argument to another function with the intention of being executed later. //
 }
 
 // function sayHi(){
@@ -40,4 +40,5 @@ console.log("Haaayiieeeee");
 
 // const x = sayHi   
 // x()
+
 // x.age = 25
