@@ -24,8 +24,9 @@ console.table([ typeof userIntro ,   typeof(userIntroChangeToNum), ageInString ,
 const hoursInDay = 24
 const myWebsiteName = "MyKart.Com"
 
-// myWebsiteName  =  "NaveenKart.com"
-// console.log(myWebsiteName);
+ myWebsiteName  =  "NaveenKart.com"
+ console.log(myWebsiteName);
+
 
 
 
